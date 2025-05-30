@@ -1,0 +1,20 @@
+.header-main {
+  display: flex;
+  flex-direction: row;
+}
+.header-left {
+  flex: 1;
+}
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about, .services, .location, .call {
+  flex: 1;
+  cursor: pointer;
+}
+.image-logo-header {
+  width: 100px;
+}
