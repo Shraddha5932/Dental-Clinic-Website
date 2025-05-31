@@ -1,6 +1,8 @@
+
 .header-main {
   display: flex;
   flex-direction: row;
+  margin: 10px;
 }
 .header-left {
   flex: 1;
