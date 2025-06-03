@@ -1,6 +1,5 @@
 .services-section {
   padding: 50px 20px;
-  background-color: #e5f7ff;
 }
 
 .services-heading {
@@ -18,7 +17,7 @@
 }
 
 .service-card {
-  background-color: white;
+  background-color: #F5EBDD;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -27,14 +26,14 @@
 }
 
 .service-card:hover {
-  background-color:#ccefff;
+   background-color: #F5EBDD;
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .service-card h3 {
   font-size: 22px;
-  color: #0288d1;
+  color: #5C4033;
   margin-bottom: 10px;
 }
 

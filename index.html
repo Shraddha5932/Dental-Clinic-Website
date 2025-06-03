@@ -14,49 +14,34 @@
   <body>
     <header class="header-main">
       <div class="header-left">
-        <img class="image-logo-header" src="images/clinic logo.png">
+        <img class="image-logo-header" src="images/clinic logo.png" alt="Dr. Poond's Logo">
+        <h1>Dr. Poond's Multispeciality Dental Clinic</h1>
       </div>
       <div class="header-right">
-        <div class="about">About</div>
-        <div class="services">Services</div>
-        <div class="location">Location</div>
-        <div class="call">Call +9123456789</div>
+        <div class="about"><a href="#">About</a></div>
+        <div class="services"><a href="#">Services</a></div>
+        <div class="location"><a href="#">Location</a></div>
+        <div class="call"><a href="tel:+919921000832">Call +919921000832</a></div>
       </div>
     </header>
     <div class="main-page">
       <div class="main-left">
-        <div class="slogan"><h1>Smile Bright, Live Right!</h1></div>
-        <div class="reasons">
-            <div class="reason-item">
-              <div class="reason-image"><img src="images/reason-1.svg"></div>
-              <div class="reason-text">
-                <h3>Expert Dentists</h3>
-                <p>Our team of experienced professionals ensures top-quality care.</p>
-              </div>
-            </div>
-            <div class="reason-item">
-              <div class="reason-image"><img src="images/reason-2.svg"></div>
-              <div class="reason-text">
-                <h3>Advanced Technology</h3>
-                <p>We use state-of-the-art equipment for precise treatments.</p>
-              </div>
-            </div>
-            <div class="reason-item">
-              <div class="reason-image"><img src="images/reason-3.svg"></div>
-              <div class="reason-text">
-                <h3>Patient Comfort</h3>
-                <p>Your comfort and satisfaction are our top priorities.</p>
-              </div>
-            </div>
-          </div>             
-        <div class="contact-info">
-          <div class="location">College Road, Nashik</div>
-          <div class="call">+91 234567890</div>
+        <div class="slogan"><h2>Smile Bright, Live Right!</h2></div>
+        <div class="clinic-details">
+          <h3>Welcome to Dr. Poond's Multispeciality Dental Clinic & Implant Center</h3>
+          <p><strong>Doctor:</strong> Dr. Pranav Poond</p>
+          <p><strong>Timings:</strong> 10:00 AM to 9:00 PM</p>
+          <p><strong>Address:</strong> 2nd Floor Dnyaneshwar Bhavan, beside Muktidham Mandir Bytco Point, Gayakhe Colony, Nashik Road, Nashik, Maharashtra 422101</p>
+          <p><strong>Phone:</strong> 9921000832</p>
+          <p><strong>Email:</strong> <a href="mailto:Pranavpund9@gmail.com">Pranavpund9@gmail.com</a></p>
         </div>
-      
       </div>
       <div class="main-right">
-        <img class="image-main-right" src="images/main-right-image.jfif">
+        <div class="slider-container">
+          <img class="slider-image" src="images/image-1-main.JPG">
+          <img class="slider-image" src="images/image-2-main.JPG">
+          <img class="slider-image" src="images/image-3-main.JPEG">
+        </div>
       </div>
     </div>
 
@@ -167,5 +152,23 @@
       </div>
     </div>
     <footer></footer>
+
+    <script>
+      const sliderImages = document.querySelectorAll('.slider-image');
+      let currentImageIndex = 0;
+
+      function showNextImage() {
+        sliderImages.forEach((img, index) => {
+          img.style.display = index === currentImageIndex ? 'block' : 'none';
+        });
+        currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
+      }
+
+      // Initial display
+      showNextImage();
+
+      // Change image every 5 seconds
+      setInterval(showNextImage, 5000);
+    </script>
   </body>
 </html>
