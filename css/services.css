@@ -1,62 +1,140 @@
 .services-section {
-  padding: 50px 20px;
+    padding: 4rem 2rem;
+    background-image: url('images/blob-scatter-haikei.svg');
 }
 
 .services-heading {
-  text-align: center;
-  font-size: 36px;
-  color: #3a3a3a;
-  margin-bottom: 30px;
-  font-weight: bold;
+    font-size: 2.5rem;
+    color: #1b898b;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.services-heading::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background: #F5A623;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
 }
 
 .service-card {
-  background-color: #F5EBDD;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-  color: #004d40;;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #F5A623; 
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, background 0.3s ease;
 }
 
 .service-card:hover {
-   background-color: #F5EBDD;
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .service-card h3 {
-  font-size: 22px;
-  color: #5C4033;
-  margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #1b898b;
+    margin-bottom: 0.5rem;
 }
 
 .service-card p {
-  font-size: 16px;
-  color: #666;
+    font-size: 0.9rem;
+    color: #5C4033;
 }
 
-.specialties {
-  margin-top: 60px;
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-heading {
+        font-size: 2rem;
+    }
 }
 
-.specialties h2 {
-  font-size: 28px;
-  color: #2c2c2c;
-  margin-bottom: 15px;
-  text-align: center;
-}
+        /* Specialties Section */
+        .specialties {
+            padding: 4rem 2rem;
+            background: linear-gradient(to bottom, #fff, #f9f5f2); /* Reverse gradient for flow */
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
 
-.specialties ul {
-  list-style: disc;
-  padding-left: 40px;
-  color: #444;
-  font-size: 18px;
-  line-height: 1.6;
-}
+        .specialties h2 {
+            font-size: 2.5rem;
+            /* color: #5C4033; */
+            color: #1b898b;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .specialties h2::after {
+            content: '';
+            width: 100px;
+            height: 3px;
+            background: #F5A623;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .specialty-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            text-align: center;
+            border: 1px solid #F5A623; 
+        }
+
+        .specialty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .specialty-card::before {
+            content: '🦷';
+            display: block;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #F5A623;
+        }
+
+        .specialty-card:nth-child(2)::before { content: '😁'; }
+        .specialty-card:nth-child(3)::before { content: '🛠️'; }
+        .specialty-card:nth-child(4)::before { content: '🦷'; }
+        .specialty-card:nth-child(5)::before { content: '⚕️'; }
+
+        .specialty-card h3 {
+            font-size: 1.2rem;
+            color: #1b898b;
+            margin-bottom: 0.5rem;
+        }
+
+        .specialty-card p {
+            font-size: 0.9rem;
+            color: #5C4033;
+        }

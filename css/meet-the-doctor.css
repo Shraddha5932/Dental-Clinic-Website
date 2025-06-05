@@ -1,0 +1,85 @@
+.doctor-section {
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom, #f9f5f2, #fff);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-doctor {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two equal columns */
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.doctor-image-container {
+    text-align: center;
+}
+
+.image-meet-the-doctor {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.doctor-heading {
+    font-size: 2.5rem;
+    color: #1B898B; /* Teal heading */
+    margin-bottom: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.doctor-content p {
+    font-size: 1rem;
+    color: #5C4033;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.get-in-touch-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #F5A623; /* Gold button */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.get-in-touch-btn:hover {
+    background-color: #e6951a; /* Darker gold on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-doctor {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+        gap: 1rem;
+    }
+
+    .doctor-heading {
+        font-size: 2rem;
+    }
+
+    .doctor-subheading {
+        font-size: 1.5rem;
+    }
+
+    .get-in-touch-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .doctor-content {
+        text-align: center;
+    }
+}

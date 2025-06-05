@@ -8,42 +8,71 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reviews.css">
     <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/meet-the-doctor.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   </head>
   <body>
-    <header class="header-main">
-      <div class="header-left">
-        <img class="image-logo-header" src="images/clinic logo.png" alt="Dr. Poond's Logo">
-        <h1>Dr. Poond's Multispeciality Dental Clinic</h1>
-      </div>
-      <div class="header-right">
-        <div class="about"><a href="#">About</a></div>
-        <div class="services"><a href="#">Services</a></div>
-        <div class="location"><a href="#">Location</a></div>
-        <div class="call"><a href="tel:+919921000832">Call +919921000832</a></div>
-      </div>
-    </header>
-    <div class="main-page">
-      <div class="main-left">
-        <div class="slogan"><h2>Smile Bright, Live Right!</h2></div>
-        <div class="clinic-details">
-          <h3>Welcome to Dr. Poond's Multispeciality Dental Clinic & Implant Center</h3>
-          <p><strong>Doctor:</strong> Dr. Pranav Poond</p>
-          <p><strong>Timings:</strong> 10:00 AM to 9:00 PM</p>
-          <p><strong>Address:</strong> 2nd Floor Dnyaneshwar Bhavan, beside Muktidham Mandir Bytco Point, Gayakhe Colony, Nashik Road, Nashik, Maharashtra 422101</p>
-          <p><strong>Phone:</strong> 9921000832</p>
-          <p><strong>Email:</strong> <a href="mailto:Pranavpund9@gmail.com">Pranavpund9@gmail.com</a></p>
-        </div>
-      </div>
-      <div class="main-right">
+    <section class="hero-section">
         <div class="slider-container">
-          <img class="slider-image" src="images/image-1-main.JPG">
-          <img class="slider-image" src="images/image-2-main.JPG">
-          <img class="slider-image" src="images/image-3-main.JPEG">
+            <img class="slider-image active" src="images/image-1-main.JPG" alt="Slide 1">
+            <img class="slider-image" src="images/image-2-main.JPG" alt="Slide 2">
+            <img class="slider-image" src="images/image-3-main.JPEG" alt="Slide 3">
         </div>
-      </div>
+        <div class="overlay">
+            <img class="logo" src="images/clinic logo.png" alt="Dr. Poond's Logo">
+            <h1>Dr. Poond's Multispeciality Dental Clinic</h1>
+            <button class="get-in-touch-btn" onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'})">
+                Book your Perfect Smile!
+            </button>
+        </div>
+    </section>
+
+    <section class="doctor-section">
+    <div class="about-doctor">
+        <div class="doctor-image-container">
+            <img src="images/meet-the-doctor.JPG" alt="Dr. Pranav Poond" class="image-meet-the-doctor">
+        </div>
+        <div class="doctor-content">
+            <h1 class="doctor-heading">Meet Dr. Pranav Poond</h1>
+            <p>
+                Dr. Pranav Poond, your trusted dentist, uses his skill to help patients achieve their healthiest and brightest smiles possible.</p>
+
+              <p>Graduating in 2013 from the University of Alberta with a Doctor of Dental Surgery, Dr. Jivani provides gentle, comprehensive dental care. He is well-versed in general dentistry, including fillings, root canals, extractions, and crowns/bridges. Additionally, he offers sedation for nervous patients, aiming for a comfortable experience for all.</p> 
+            <button class="get-in-touch-btn" onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'})">
+                Book your Perfect Smile!
+            </button>
+        </div>
     </div>
+</section>
+
+    <div class="specialties">
+            <h2>Our Specialties</h2>
+            <div class="specialties-grid">
+                <div class="specialty-card">
+                    <h3>Dental Implants</h3>
+                    <p>From single implant to full mouth implants for a perfect smile.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Digital Smile Designing</h3>
+                    <p>Customized smile makeover using advanced software for aesthetics.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>TMJ Treatment</h3>
+                    <p>Relief from jaw pain or headaches caused by jaw joint issues.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Complete Denture (Kavli)</h3>
+                    <p>High-quality dentures for a natural look and feel.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Full Mouth Rehabilitation</h3>
+                    <p>Comprehensive care to restore your oral health and smile.</p>
+                </div>
+            </div>
+        </div>
+
 
     <section class="services-section">
       <h2 class="services-heading">Our Services</h2>
@@ -117,58 +146,73 @@
           <p>Safe and quick removal of problematic teeth.</p>
         </div>
       </div>
-
-      <div class="specialties">
-        <h2>Our Specialties</h2>
-        <ul>
-          <li>Dental Implants (From single implant to full mouth implants)</li>
-          <li>Digital Smile Designing</li>
-          <li>TMJ Treatment</li>
-          <li>Complete Denture (Kavli)</li>
-          <li>Full Mouth Rehabilitation</li>
-        </ul>
-      </div>
     </section>
 
-    <div class="review-page">
-      <div class="review-left">
-        <img src="images/quotation-marks.svg">
-        <h1>Words from happy smiles!</h1>
-        <img src="images/5-star-image.png">
-      </div>
-      <div class="review-right">
-        <div class="review-1">"Absolutely amazing experience! The staff was kind, and my dentist explained everything so clearly. I finally feel confident about my smile!"
-        — Ritika S.</div>
-        <div class="review-2">"Clean clinic, zero waiting time, and painless treatment. Highly recommend for anyone nervous about dental visits!"
-        — Rahul M.</div>
-        <div class="review-3">"The doctors are so gentle and professional. I went in for a root canal and came out smiling—literally!"
-        — Sneha T.</div>
-        <div class="review-4">"My kids actually enjoy going to the dentist now. The team here is patient and so friendly with children!"
-        — Anjali P.</div>
-        <div class="review-5">"Got my braces removed last week. The transformation is incredible! Thank you for bringing my smile back."
-        — Karan D.</div>
-        <div class="review-6">"From consultation to treatment, everything was smooth. The hygiene standards are top-notch, and the results speak for themselves."
-        — Priya N.</div>
-      </div>
-    </div>
+    <section class="review-section">
+        <h2>Words from Happy Smiles!</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <p>Absolutely amazing experience! The staff was kind, and my dentist explained everything so clearly. I finally feel confident about my smile!</p>
+                <div class="author">— Ritika S.</div>
+            </div>
+            <div class="review-card">
+                <p>Clean clinic, zero waiting time, and painless treatment. Highly recommend for anyone nervous about dental visits!</p>
+                <div class="author">— Rahul M.</div>
+            </div>
+            <div class="review-card">
+                <p>The doctors are so gentle and professional. I went in for a root canal and came out smiling—literally!</p>
+                <div class="author">— Sneha T.</div>
+            </div>
+            <div class="review-card">
+                <p>My kids actually enjoy going to the dentist now. The team here is patient and so friendly with children!</p>
+                <div class="author">— Anjali P.</div>
+            </div>
+            <div class="review-card">
+                <p>Got my braces removed last week. The transformation is incredible! Thank you for bringing my smile back.</p>
+                <div class="author">— Karan D.</div>
+            </div>
+            <div class="review-card">
+                <p>From consultation to treatment, everything was smooth. The hygiene standards are top-notch, and the results speak for themselves.</p>
+                <div class="author">— Priya N.</div>
+            </div>
+        </div>
+    </section>
     <footer></footer>
 
+   <section class="contact-section" id="contact-section">
+    <h2>Contact Us</h2>
+  <div class="contact-wrapper">
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.3341998025176!2d73.83461197505082!3d19.952442781440983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebb1dd95dd75%3A0xf2c9f5dd0c25a80c!2sDr.%20Poond&#39;s%20Multi-speciality%20Dental%20Clinic%20%26%20Implant%20center%2C%20Nashik!5e0!3m2!1sen!2sin!4v1749109628234!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-details">
+            <p><strong>Timings:</strong> 10:00 AM to 9:00 PM</p>
+            <p><strong>Address:</strong> 2nd Floor Dnyaneshwar Bhavan, beside Muktidham Mandir Bytco Point, Gayakhe Colony, Nashik Road, Nashik, Maharashtra 422101</p>
+            <p><strong>Phone:</strong> 99210 00832</p>
+            <p><strong>Email:</strong> <a href="mailto:Pranavpund9@gmail.com">Pranavpund9@gmail.com</a></p>
+        </div>
+    </div>
+</section>
+
     <script>
-      const sliderImages = document.querySelectorAll('.slider-image');
-      let currentImageIndex = 0;
+        const sliderImages = document.querySelectorAll('.slider-image');
+        let currentImageIndex = 0;
 
-      function showNextImage() {
-        sliderImages.forEach((img, index) => {
-          img.style.display = index === currentImageIndex ? 'block' : 'none';
-        });
-        currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
-      }
+        function showNextImage() {
+            sliderImages.forEach((img, index) => {
+                img.classList.remove('active');
+                if (index === currentImageIndex) {
+                    img.classList.add('active');
+                }
+            });
+            currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
+        }
 
-      // Initial display
-      showNextImage();
+        // Initial display
+        showNextImage();
 
-      // Change image every 5 seconds
-      setInterval(showNextImage, 5000);
+        // Change image every 5 seconds
+        setInterval(showNextImage, 5000);
     </script>
   </body>
 </html>

@@ -1,62 +1,62 @@
-.review-page {
-  display: flex;
-  margin: 20px auto;
-  max-width: 1200px;
-  height: auto;
-  font-family: 'Poppins', sans-serif;
-}
-.review-left {
-  width: 250px;
-  margin: 20px;
-  margin-right: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.review-left img {
-  margin-bottom: 15px;
-  width: 60px;
-}
-.review-left h1 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #333;
-}
-.review-right {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 20px;
-}
-.review-right > div {
-  padding: 20px;
-  font-size: 18px;
-  line-height: 1.5;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-.review-right > div:hover {
-  transform: translateY(-5px);
-}
-.review-1 {
-  background-color: #FAEDCB;
-}
-.review-2 {
-  background-color: #C9E4DE;
-}
-.review-3 {
-  background-color: #C6DEF1;
-}
-.review-4 {
-  background-color: #DBCDF0;
-}
-.review-5 {
-  background-color: #F2C6DE;
-}
-.review-6 {
-  background-color: #F7D9C4;
-}
+ .review-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(to bottom, #f9f5f2, #fff);
+            text-align: center;
+        }
+
+        .review-section h2 {
+            font-size: 2.5rem;
+            color: #1b898b;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .review-section h2::after {
+            content: '';
+            width: 100px;
+            height: 3px;
+            background: #F5A623;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .review-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            border: 1px solid #F5A623;
+        }
+
+        .review-card::before {
+            content: '“';
+            font-size: 3rem;
+            color: #F5A623;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .review-card p {
+            font-size: 1rem;
+            color: #5C4033;
+            margin-bottom: 1rem;
+        }
+
+        .review-card .author {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1b898b;
+        }
+       

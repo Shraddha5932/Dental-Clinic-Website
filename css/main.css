@@ -1,110 +1,94 @@
-.main-page {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 5px;
-  height: 90vh;
-  margin-right: 10px;
-  background-color: #F5EBDD;
-}
-.main-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-}
+.hero-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
 
-.slogan {
-  width: 90%;
-  font-size: 30px;
-  margin-bottom: 1rem;
-}
+        .slider-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
 
-.slogan h2 {
-  color: #5C4033;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-}
+        .slider-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            transform: scale(1.1); /* Slight zoom for parallax effect */
+        }
 
-.clinic-details {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-  color: #5C4033;
-  font-family: 'Poppins', sans-serif;
-}
+        .slider-image.active {
+            opacity: 1.5;
+            transform: scale(1); /* Zoom out when active */
+            transition: opacity 1s ease-in-out, transform 5s ease-in-out;
+        }
 
-.clinic-details h3 {
-  font-size: 1.5rem;
-  color: #F4A300;
-  margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
-}
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            z-index: 10;
+        }
 
-.clinic-details p {
-  margin-bottom: 0.5rem;
-}
+        .overlay img.logo {
+            width: 150px;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInScale 1s ease forwards;
+        }
 
-.clinic-details a {
-  color: #F4A300;
-  text-decoration: none;
-}
+        .overlay h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            animation: fadeInScale 1s ease forwards 0.3s;
+        }
 
-.clinic-details a:hover {
-  text-decoration: underline;
-}
+        .get-in-touch-btn {
+            padding: 0.75rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            background-color: #F5A623;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInScale 1s ease forwards 0.6s;
+        }
 
-.main-right {
-  width: 95%;
-  height: 85%;
-  position: relative;
-}
+        .get-in-touch-btn:hover {
+            background-color: #e6951a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
 
-.slider-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: 20px;
-}
-
-.slider-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 800px;
-}
-
-.slider-image:first-child {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .main-page {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-
-  .main-left {
-    padding: 1.5rem;
-  }
-
-  .main-right {
-    height: 50vh;
-  }
-
-  .slogan {
-    font-size: 24px;
-  }
-
-  .clinic-details h3 {
-    font-size: 1.2rem;
-  }
-
-  .clinic-details {
-    font-size: 1rem;
-  }
-}
+        /* Animations */
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
